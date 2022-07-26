@@ -25,3 +25,8 @@ result*
 .envrc
 .vim
 wallets/
+user.pkh
+stake.policy
+script.addr
+datum-pool.json
+datum-user.json
