@@ -41,18 +41,33 @@ common lang
 library
     import: lang
     exposed-modules:
-      Stake
-    build-depends:
-      base >= 4.9 && < 5,
-      aeson,
-      bytestring,
-      containers,
-      freer-extras,
-      playground-common,
-      plutus-contract,
-      plutus-tx-plugin,
-      plutus-tx,
-      plutus-ledger,
+      Stake,
+      SUtils
+    build-depends:     aeson
+                     , base ^>=4.14.1.0
+                     , bytestring
+                     , cardano-api
+                     , cardano-crypto-class
+                     , cardano-ledger-core
+                     , cardano-ledger-shelley
+                     , cardano-wallet-core
+                     , containers
+                     , data-default
+                     , freer-extras
+                     , openapi3
+                     , playground-common
+                     , plutus-contract
+                     , plutus-ledger
+                     , plutus-ledger-api
+		                 , plutus-chain-index
+                     , plutus-pab
+                     , plutus-tx-plugin
+                     , plutus-tx
+                     , plutus-use-cases
+                     , prettyprinter
+                     , serialise
+                     , text
+                    , lens
     hs-source-dirs: src
 
 test-suite plutus-example-projects-test
@@ -116,3 +131,98 @@ executable           script-dump
                       ScopedTypeVariables
                       StandaloneKindSignatures
   ghc-options:        -Wall -fobject-code -fno-ignore-interface-pragmas -fno-omit-interface-pragmas -fno-strictness -fno-spec-constr -fno-specialise
+
+executable make-policy
+  main-is: make-policy.hs
+  hs-source-dirs:      app
+  ghc-options:         -Wall
+  build-depends:     aeson
+                     , base ^>=4.14.1.0
+                     , plutus-starter
+                     , bytestring
+                     , cardano-api
+                     , cardano-crypto-class
+                     , cardano-ledger-core
+                     , cardano-ledger-shelley
+                     , cardano-wallet-core
+                     , containers
+                     , data-default
+                     , freer-extras
+                     , openapi3
+                     , playground-common
+                     , plutus-contract
+                     , plutus-ledger
+                     , plutus-ledger-api
+		                 , plutus-chain-index
+                     , plutus-pab
+                     , plutus-tx-plugin
+                     , plutus-tx
+                     , plutus-use-cases
+                     , prettyprinter
+                     , serialise
+                     , text
+                    , lens
+
+executable make-user-datum
+  main-is: make-user-datum.hs
+  hs-source-dirs:      app
+  ghc-options:         -Wall
+  build-depends:     aeson
+                     , base ^>=4.14.1.0
+                     , plutus-starter
+                     , bytestring
+                     , cardano-api
+                     , cardano-crypto-class
+                     , cardano-ledger-core
+                     , cardano-ledger-shelley
+                     , cardano-wallet-core
+                     , containers
+                     , data-default
+                     , freer-extras
+                     , openapi3
+                     , playground-common
+                     , plutus-contract
+                     , plutus-ledger
+                     , plutus-ledger-api
+		                 , plutus-chain-index
+                     , plutus-pab
+                     , plutus-tx-plugin
+                     , plutus-tx
+                     , plutus-use-cases
+                     , prettyprinter
+                     , serialise
+                     , text
+                    , lens
+                    , time 
+
+executable make-pool-datum
+  main-is: make-pool-datum.hs
+  hs-source-dirs:      app
+  ghc-options:         -Wall
+  build-depends:     aeson
+                     , base ^>=4.14.1.0
+                     , plutus-starter
+                     , bytestring
+                     , cardano-api
+                     , cardano-crypto-class
+                     , cardano-ledger-core
+                     , cardano-ledger-shelley
+                     , cardano-wallet-core
+                     , containers
+                     , data-default
+                     , freer-extras
+                     , openapi3
+                     , playground-common
+                     , plutus-contract
+                     , plutus-ledger
+                     , plutus-ledger-api
+		                 , plutus-chain-index
+                     , plutus-pab
+                     , plutus-tx-plugin
+                     , plutus-tx
+                     , plutus-use-cases
+                     , prettyprinter
+                     , serialise
+                     , text
+                    , lens
+                    , time 

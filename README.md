@@ -200,3 +200,20 @@ For more interactive discussion, you can join the [IOG Technical Community
 Discord](https://discord.gg/sSF5gmDBYg).
 
 Thanks!
+
+## Guide to Using Shell Scripts
+
+1. Create stake policy script
+```
+$ ./scripts/make-policy.sh
+```
+
+2. Create pool datum
+```
+$ ./scripts/make-pool-datum.sh
+```
+
+3. Create user datum
+```
+$ ./scripts/make-user.datum.sh
+```
