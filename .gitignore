@@ -30,3 +30,5 @@ stake.policy
 script.addr
 datum-pool.json
 datum-user.json
+redeemer-use.json
+redeemer-remove.json 

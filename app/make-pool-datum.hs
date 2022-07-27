@@ -53,7 +53,7 @@ main :: IO ()
 main = do
   [addr'] <- getArgs
   currPOSIX' <- Time.getPOSIXTime
-  let addr = fromRight (error "not right") $ fromCardanoAddress $ fromJust $ deserialiseAddress (AsAddressInEra AsAlonzoEra) (Data.String.fromString addr') ---should add bettter error message for maybe failtu
+  let addr = fromRight (error "not right") $ fromCardanoAddress $ fromJust $ deserialiseAddress (AsAddressInEra AsAlonzoEra) (Data.String.fromString addr') ---should add bettter error message for maybe failture (example of good in old redeemer make file)
       currPOSIX = Ledger.POSIXTime ( round $ currPOSIX' * 1000)
       dh = mkODUnit
       datum   = mkPoolDatum addr dh currPOSIX 

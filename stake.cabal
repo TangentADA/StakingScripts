@@ -226,3 +226,35 @@ executable make-pool-datum
                      , text
                     , lens
                     , time 
+
+executable make-redeemer
+  main-is: make-redeemer.hs
+  hs-source-dirs:      app
+  ghc-options:         -Wall
+  build-depends:     aeson
+                     , base ^>=4.14.1.0
+                     , plutus-starter
+                     , bytestring
+                     , cardano-api
+                     , cardano-crypto-class
+                     , cardano-ledger-core
+                     , cardano-ledger-shelley
+                     , cardano-wallet-core
+                     , containers
+                     , data-default
+                     , freer-extras
+                     , openapi3
+                     , playground-common
+                     , plutus-contract
+                     , plutus-ledger
+                     , plutus-ledger-api
+		                 , plutus-chain-index
+                     , plutus-pab
+                     , plutus-tx-plugin
+                     , plutus-tx
+                     , plutus-use-cases
+                     , prettyprinter
+                     , serialise
+                     , text
+                    , lens
+                    , time 
